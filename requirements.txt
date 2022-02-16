@@ -1,0 +1,6 @@
+Flask==2.0.3
+gnewsclient==1.12
+protobuf==3.19.4
+python-dotenv==0.19.2
+python_telegram_bot==13.11
+telegram==0.0.1
