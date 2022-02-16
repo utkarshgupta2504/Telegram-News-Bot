@@ -113,9 +113,11 @@ def webhook():
 bot = Bot(os.environ["TOKEN"])
 
 dp = Dispatcher(bot, None)
-
-bot.set_webhook(
-    f"https://fast-waters-84122.herokuapp.com/{os.environ['TOKEN']}")
+try:
+    bot.set_webhook(
+        f"https://fast-waters-84122.herokuapp.com/{os.environ['TOKEN']}")
+except Exception as e:
+    print(e)
 
 dp.add_handler(CommandHandler("start", start))
 dp.add_handler(CommandHandler("help", _help))
